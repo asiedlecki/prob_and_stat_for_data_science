@@ -6,8 +6,8 @@ roll <- function(nd) return(sample(1:6, nd, replace=TRUE))
 
 probtotk <- function(d, k, nreps) {
   sums <- vector(length = nreps)
-  # do the experiment nreps time
-  for (rep in 1:nreps) sums[rep] <- sum(roll(d))
+  # do the experiment nreps times
+  sums <- replicate(nreps, sum(roll(d)))
   return(mean(sums == k))
 }
 
