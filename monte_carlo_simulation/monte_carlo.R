@@ -1,14 +1,14 @@
 # roll d dice ; find P(total = k)
 
+# simulate roll of nd dice; 
+# the possible return values are 1,2,3,4,5,6, all equally likely
+roll <- function(nd) return(sample(1:6, nd, replace=TRUE))
+
 probtotk <- function(d, k, nreps) {
-  count <- 0
-  # do the experiment nreps times -- like doing nreps notebook lines
-  for (rep in 1:nreps) {
-    # roll d dice and find their sum
-    total <- sum(sample(1:6, d, replace = TRUE))
-    if (total == k) count <- count + 1
-  }
-  return(count/nreps)
+  sums <- vector(length = nreps)
+  # do the experiment nreps time
+  for (rep in 1:nreps) sums[rep] <- sum(roll(d))
+  return(mean(sums == k))
 }
 
 # example
