@@ -1,3 +1,4 @@
+### If we roll three dice, what is the probability that their total is 8?
 # roll d dice ; find P(total = k)
 
 # simulate roll of nd dice; 
