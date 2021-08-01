@@ -15,5 +15,3 @@ dicesim <- function(nreps) {
   }
   return(count2 / count1)
 }
-
-dicesim(1000)
