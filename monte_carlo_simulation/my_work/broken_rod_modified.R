@@ -1,6 +1,6 @@
-## Say a glass rod drops and breaks into random number of pieces, taking on values 2, 3, 4
-## with prbabilites 0.3, 0.3, 0.4.
-## Let's find the probability that the smallest piece has length below 0.02.
+## Modify the simulation code in the broken-rod example, Section 2.6,
+## so that the number of pieces will be random, taking on the values
+## 2,3 and 4 with probabilities 0.3, 0.3 and 0.4
 
 minpiece <- function() {
   k <- sample(x=c(2, 3, 4), size=1, prob=c(0.3, 0.3, 0.4))
