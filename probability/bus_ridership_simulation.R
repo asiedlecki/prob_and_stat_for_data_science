@@ -12,7 +12,15 @@ toss_coin <- function() {
 ## inside being equally likely. For instance, probability that the functions returns
 ## a value in (0, 0.5) is 0.5.
 
-## Bus ridership:
+## Bus ridership
+## Model:
+#### 1. At each stop, each passengers alights from the bus, independently of the actions of others,
+#### with probability 0.2 each.
+#### 2. Either 0, 1 or 2 new passengers get on the bus, with probabilities 0.5, 0.4, 0.1, respectively.
+#### Passengers at successive stops act independently.
+#### 3. Assume the bus is so large that it never becomes full, so the new passengers can always board.
+#### 4. Suppose the bus is empty when it arrives at its first stop.
+
 ## Finding probability that after visiting the tenth stop, the bus is empty.
 ## This is too complicated to solve analytically, but can be easily simulated.
 
